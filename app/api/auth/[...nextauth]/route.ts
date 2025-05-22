@@ -1,3 +1,4 @@
+
 import NextAuth, { AuthOptions } from 'next-auth';
 import { JWT } from 'next-auth/jwt';
 import ZitadelProvider from 'next-auth/providers/zitadel';
