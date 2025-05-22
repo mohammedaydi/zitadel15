@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import React from 'react';
-import sideImage from "../../assets/login-page-bedroom-window.png"
 import orangeStarIcon from "../../assets/Icon.png"
 import { signIn ,useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
@@ -22,7 +21,7 @@ export default function Login() {
       <div className="w-1/2 flex flex-col justify-center items-center bg-gray-50">
         {/* Logo */}
         <div className="mb-12 flex items-center gap-2">
-          <h2 className='text-[#6B7B83] text-2xl'>brite</h2>
+          <h2 className='text-[#6B7B83] text-2xl'>MM</h2>
           <Image
             src={orangeStarIcon}
             alt="Logo"
@@ -30,7 +29,7 @@ export default function Login() {
             height={28}
           />
           <div className='w-[29px] h-[0px] rotate-90 border-[#7C7C7C]  border-[0.5px]'></div>
-          <h2 className="text-[#6B7B83] text-base font-normal leading-6">Dealer Admin</h2>
+          <h2 className="text-[#6B7B83] text-base font-normal leading-6">Mohammed</h2>
         </div>
         <button
           onClick={() => signIn('zitadel',{callbackUrl: AFTER_LOGIN_URL})} // assuming you’re using next-auth
