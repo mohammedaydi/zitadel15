@@ -59,8 +59,7 @@ export const authOptions : AuthOptions = {
       
     }),
   ],
-  ...(process.env.NEXT_ENV === "production" && {
-    cookies: { //secure cookies in production environments
+   cookies: { //secure cookies in production environments
     pkceCodeVerifier: {
       name: `__Secure-next-auth.pkce.code_verifier`,
       options: {
@@ -70,8 +69,7 @@ export const authOptions : AuthOptions = {
         secure: true, 
         },
       },
-    }
-  }),
+    },
   callbacks: {
     async jwt({ token, user, account }) {
       token.user ??= user;
