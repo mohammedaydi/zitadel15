@@ -69,6 +69,23 @@ export const authOptions : AuthOptions = {
         secure: true, 
         },
       },
+      csrfToken: {
+        name: `next-auth.csrf-token`,
+        options: {
+          httpOnly: true,
+          sameSite: 'lax',
+          path: '/',
+          secure: true,
+        },
+      },
+      callbackUrl: {
+        name: `next-auth.callback-url`,
+        options: {
+          sameSite: 'lax',
+          path: '/',
+          secure: true,
+        },
+      },
     },
   callbacks: {
     async jwt({ token, user, account }) {
