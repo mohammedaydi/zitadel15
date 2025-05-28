@@ -86,6 +86,15 @@ export const authOptions : AuthOptions = {
           secure: true,
         },
       },
+      state: {
+        name: `__Secure-next-auth.state`,
+        options: {
+          httpOnly: true,
+          sameSite: "lax",
+          path: "/",
+          secure: true,
+        },
+      },
     },
     debug: true,  // ← right here!
   callbacks: {
