@@ -133,3 +133,7 @@ const authOptions : AuthOptions = {
 const handler = NextAuth(authOptions);
 
 export {handler as GET, handler as POST}
+
+// Important addition for Node runtime
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
