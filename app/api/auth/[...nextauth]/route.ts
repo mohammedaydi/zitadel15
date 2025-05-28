@@ -34,7 +34,7 @@ async function refreshAccessToken(token: JWT): Promise<JWT> {
 }
 
 
-export const authOptions : AuthOptions = {
+const authOptions : AuthOptions = {
   providers: [
     ZitadelProvider({
       issuer: process.env.ZITADEL_ISSUER,
@@ -130,6 +130,6 @@ export const authOptions : AuthOptions = {
 };
 
 
-export default NextAuth(authOptions);
+const handler = NextAuth(authOptions);
 
-// export {handler as GET, handler as POST}
+export {handler as GET, handler as POST}
