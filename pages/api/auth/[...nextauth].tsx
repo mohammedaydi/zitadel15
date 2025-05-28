@@ -87,6 +87,7 @@ export const authOptions : AuthOptions = {
         },
       },
     },
+    debug: true,  // ← right here!
   callbacks: {
     async jwt({ token, user, account }) {
       token.user ??= user;
