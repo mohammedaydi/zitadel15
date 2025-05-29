@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React from 'react';
-import orangeStarIcon from "../../assets/Icon.png"
+import orangeStarIcon from "../assets/Icon.png"
 import { signIn ,useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
 
