@@ -61,43 +61,43 @@ const authOptions : AuthOptions = {
       
     }),
   ],
-   cookies: { //secure cookies in production environments
-    pkceCodeVerifier: {
-      name: `__Secure-next-auth.pkce.code_verifier`,
-      options: {
-        httpOnly: true,
-        sameSite: 'lax',
-        path: '/',
-        secure: true, 
-        },
-      },
-      csrfToken: {
-        name: `next-auth.csrf-token`,
-        options: {
-          httpOnly: true,
-          sameSite: 'lax',
-          path: '/',
-          secure: true,
-        },
-      },
-      callbackUrl: {
-        name: `next-auth.callback-url`,
-        options: {
-          sameSite: 'lax',
-          path: '/',
-          secure: true,
-        },
-      },
-      state: {
-        name: `__Secure-next-auth.state`,
-        options: {
-          httpOnly: true,
-          sameSite: "lax",
-          path: "/",
-          secure: true,
-        },
-      },
-    },
+  //  cookies: { //secure cookies in production environments
+  //   pkceCodeVerifier: {
+  //     name: `__Secure-next-auth.pkce.code_verifier`,
+  //     options: {
+  //       httpOnly: true,
+  //       sameSite: 'lax',
+  //       path: '/',
+  //       secure: true, 
+  //       },
+  //     },
+  //     csrfToken: {
+  //       name: `next-auth.csrf-token`,
+  //       options: {
+  //         httpOnly: true,
+  //         sameSite: 'lax',
+  //         path: '/',
+  //         secure: true,
+  //       },
+  //     },
+  //     callbackUrl: {
+  //       name: `next-auth.callback-url`,
+  //       options: {
+  //         sameSite: 'lax',
+  //         path: '/',
+  //         secure: true,
+  //       },
+  //     },
+  //     state: {
+  //       name: `__Secure-next-auth.state`,
+  //       options: {
+  //         httpOnly: true,
+  //         sameSite: "lax",
+  //         path: "/",
+  //         secure: true,
+  //       },
+  //     },
+  //   },
     debug: true,  // ← right here!
   callbacks: {
     async jwt({ token, user, account }) {

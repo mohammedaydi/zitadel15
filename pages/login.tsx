@@ -3,11 +3,17 @@
 import Image from 'next/image';
 import React from 'react';
 import orangeStarIcon from "../assets/Icon.png"
-import { signIn } from 'next-auth/react';
+import { signIn ,useSession } from 'next-auth/react';
+import { redirect } from 'next/navigation';
 
 const AFTER_LOGIN_URL = process.env.NEXT_PUBLIC_ZITADEL_AFTER_LOGIN_URL;
 
 export default function Login() {
+  const { status } = useSession();
+
+  if(status === 'authenticated'){
+    redirect(AFTER_LOGIN_URL as string);
+  }
   
   return (
     <div className="flex h-screen">
