@@ -4,7 +4,7 @@ import { JWT } from 'next-auth/jwt';
 import ZitadelProvider from 'next-auth/providers/zitadel';
 import { Issuer } from 'openid-client';
 
-export const runtime = 'nodejs' // force Node.js for full cookie support
+// export const runtime = 'nodejs' // force Node.js for full cookie support
 
 
 async function refreshAccessToken(token: JWT): Promise<JWT> {
