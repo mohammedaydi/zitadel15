@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 import orangeStarIcon from "../assets/Icon.png"
-import { redirect } from 'next/navigation';
+import { signIn } from 'next-auth/react';
 
 const AFTER_LOGIN_URL = process.env.NEXT_PUBLIC_ZITADEL_AFTER_LOGIN_URL;
 
